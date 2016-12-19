@@ -16,8 +16,16 @@ app.get('/', function(req, res) {
 
 app.listen(PORT);
 console.log('Running on http://localhost:' + PORT);
-for (var i = 0; i <= 1000000; i++) {
-    (function(ind) {
-        setTimeout(function() { console.log('Mock Log number:', ind); }, 1000 + (3000 * ind));
-    })(i);
+
+
+setTimeout(callback(), 100);
+
+function callback() {
+    return function() {
+        for (var i = 0; i <= 100; i++) {
+            (function(ind) {
+                setTimeout(function() { console.log('Mock Log number:', ind); }, 1000 + (1000 * ind));
+            })(i);
+        }
+    }
 }
