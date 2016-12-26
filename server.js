@@ -22,9 +22,9 @@ setTimeout(callback(), 100);
 
 function callback() {
     return function() {
-        for (var i = 0; i <= 100; i++) {
+        for (var i = 0; i <= 34442000100; i++) {
             (function(ind) {
-                setTimeout(function() { console.log('Mock Log number:', ind); }, 1000 + (1000 * ind));
+                setTimeout(function() { console.log('Mock Log number:', ind); }, 2000 + (3000 * ind));
             })(i);
         }
     }
