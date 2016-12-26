@@ -22,7 +22,7 @@ setTimeout(callback(), 100);
 
 function callback() {
     return function() {
-        for (var i = 0; i <= 34442000100; i++) {
+        for (var i = 0; i <= 9999; i++) {
             (function(ind) {
                 setTimeout(function() { console.log('Mock Log number:', ind); }, 2000 + (3000 * ind));
             })(i);
